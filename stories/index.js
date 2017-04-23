@@ -13,18 +13,20 @@ chartStories
       <Chart percent={number('Percent', 75)} />
     </div>
   ), {inline: true, propTables: false })
-  .addWithInfo('Responsive by default', 'Resize window to see chart rescale.',
-  () => (
-    <div style={{width: '60%', margin: '10px'}}>
-      <Chart percent={number('Percent', 75)} />
+
+  .addWithInfo('Responsive by default', 'Scale chart size by changing container size', () => (
+    <div>
+      <div style={{width: '50px', height: '50px' }}>
+        <Chart percent={number('Percent', 75)} />
+      </div>
+      <div style={{width: '100px', height: '100px'}}>
+        <Chart percent={number('Percent', 75)} />
+      </div>
+      <div style={{width: '200px', height: '200px'}}>
+        <Chart percent={number('Percent', 75)} />
+      </div>
     </div>
-  ),
-  { inline: true, propTables: false }
-)
-  .addWithInfo('Make it tiny', 'Scale chart size by changing container size', () => (
-    <div style={{width: '50px', height: '50px', margin: '10px'}}>
-      <Chart percent={number('Percent', 75)} />
-    </div>
+
   ),
   { inline: true, propTables: false }
 )
