@@ -62,7 +62,7 @@ ProgressChart.defaultProps = {
   percent: 0,
   fat: false,
   floating: false,
-  underlayColor: 'rgba(0, 0, 0, 0.05)',
+  underlayColor: 'rgba(0, 0, 0, 0.03)',
   label: null,
   initialAnimation: true,
   prefix: '',

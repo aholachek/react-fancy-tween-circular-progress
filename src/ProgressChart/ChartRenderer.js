@@ -77,8 +77,6 @@ export default function (svgEl, options) {
 
   if (options.floating) {
     arc.attr('filter', 'url(#dropshadow)')
-    backgroundPath
-    .attr('fill', 'transparent')
   }
 
   // ========================================================
