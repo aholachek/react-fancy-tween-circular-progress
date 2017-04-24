@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ChartRenderer from './ChartRenderer'
 import ReactDOM from 'react-dom'
 
-export default class DonutChart extends React.Component {
+export default class ProgressChart extends React.Component {
   componentDidMount () {
     this.Vis = ChartRenderer(
       ReactDOM.findDOMNode(this).querySelector('svg'),
@@ -56,7 +56,7 @@ export default class DonutChart extends React.Component {
     </div>)
   }
 }
-DonutChart.defaultProps = {
+ProgressChart.defaultProps = {
   color: {0: '#E53935', 25: '#F1C40E', 75: '#F1C40E', 100: '#27AE60'},
   percentSymbol: false,
   percent: 0,
@@ -69,7 +69,7 @@ DonutChart.defaultProps = {
   suffix: ''
 }
 
-DonutChart.propTypes = {
+ProgressChart.propTypes = {
   percent: PropTypes.number,
   color: PropTypes.oneOfType([
     PropTypes.string,

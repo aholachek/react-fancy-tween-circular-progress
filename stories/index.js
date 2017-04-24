@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs'
-import Chart from './../src/DonutChart'
+import Chart from './../index'
 import './style.css'
 
 const chartStories = storiesOf('Chart', module)
