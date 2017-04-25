@@ -11,7 +11,7 @@ export default class ProgressChart extends React.Component {
     )
   }
 
-  componentWillUpdate (nextProps) {
+  shouldComponentUpdate (nextProps) {
     if (nextProps.percent !== this.props.percent) {
       this.Vis.updateChart(nextProps.percent)
     }
