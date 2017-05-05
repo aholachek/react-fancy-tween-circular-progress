@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs'
-import Chart from './../index'
+import Chart from './../src/index'
 import './style.css'
 
 const chartStories = storiesOf('Chart', module)
@@ -50,6 +50,15 @@ chartStories
   ),
   { inline: true, propTables: false }
 )
+.addWithInfo('Just use one color', () => (
+  <div style={{width: '300px', height: '300px', margin: '2%'}}>
+    <Chart percent={number('Percent', 75)} color='#4e4eff'
+    />
+  </div>
+),
+{ inline: true, propTables: false }
+)
+
   .addWithInfo('Add a suffix', () => (
     <div style={{width: '300px', height: '300px', margin: '2%'}}>
       <Chart percent={number('Percent', 75)} suffix='%' />

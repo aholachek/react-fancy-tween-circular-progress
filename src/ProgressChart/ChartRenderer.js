@@ -14,12 +14,10 @@ function normalizePercent (percent) {
 
 export default function (svgEl, options) {
   const percent = normalizePercent(options.percent)
-  if (typeof options.color === 'string') {
-    options.color = {
-      0: options.color,
-      100: options.color
-    }
-  }
+  const color = (typeof options.color === 'string') ? {
+    0: options.color,
+    100: options.color
+  } : options.color
 
   const svg = select(svgEl)
 
@@ -28,8 +26,8 @@ export default function (svgEl, options) {
     .attr('transform', 'translate(' + 85 + ',' + 100 + ')')
 
   const colorScale = scaleLinear()
-    .domain(Object.keys(options.color).map(n => parseInt(n)))
-    .range(Object.values(options.color))
+    .domain(Object.keys(color).map(n => parseInt(n)))
+    .range(Object.values(color))
 
   const arcPath = d3Shape.arc()
     .outerRadius(radius)
@@ -77,6 +75,8 @@ export default function (svgEl, options) {
 
   if (options.floating) {
     arc.attr('filter', 'url(#dropshadow)')
+    backgroundPath
+    .attr('fill', 'transparent')
   }
 
   // ========================================================
