@@ -1,6 +1,6 @@
 {
   "name": "react-fancy-tween-circular-progress",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A configurable circular progress bar with color and number animation",
   "repository": {
     "type": "git",
