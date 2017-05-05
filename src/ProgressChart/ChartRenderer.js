@@ -23,7 +23,7 @@ export default function (svgEl, options) {
 
   const radius = 80
   const g = svg.append('g')
-    .attr('transform', 'translate(' + radius + ',' + radius + ')')
+    .attr('transform', 'translate(' + 100 + ',' + 100 + ')')
 
   const colorScale = scaleLinear()
     .domain(Object.keys(color).map(n => parseInt(n)))
